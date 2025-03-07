@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+3import java.util.ArrayList;
 
 
 public class Car implements CarRequirements {
@@ -67,6 +67,10 @@ public class Car implements CarRequirements {
      */
 
     public Boolean removePassenger(Passenger p) {
+        if(passengersOnboard.size() <= 0) {
+            System.out.println("Cannot remove anymore passengers!");
+        }
+        
         if (passengersOnboard.contains(p)) {
             passengersOnboard.remove(p);
             return true;

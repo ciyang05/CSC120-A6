@@ -7,24 +7,37 @@ public class TrainTest {
     @Test
     public void testEngineConstructor() {
         Engine myEngine = new Engine(FuelType.ELECTRIC, 50.0, 150);
-        
-        
+
+        assertEquals(50.0, myEngine.getCurrentFuel(),0.0);
+        assertEquals(FuelType.ELECTRIC, myEngine.getFuelType());
+        assertEquals(150.0, myEngine.getMaxFuel(), 0.0);
     }
 
     @Test
     public void testEngineGo() {
-        fail();
+        Engine myEngine = new Engine(FuelType.ELECTRIC, 50.0, 150);
+
+        assertTrue(myEngine.go());
     }
 
     // Car Tests
     @Test
     public void testCarAddPassenger() {
-        fail();
+        Car myCar = new Car(70);
+
+        assertTrue(myCar.addPassenger(null));
+
     }
 
     @Test
     public void testCarRemovePassenger() {
-        fail();
+        Car myCar = new Car(70);
+
+        assertTrue(myCar.removePassenger(null));
+        // assertNotEquals(-70.0, 70.0, 0.0);
+
+        assertEquals()
+
     }
 
     // Passenger Tests
