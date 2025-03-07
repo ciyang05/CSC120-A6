@@ -6,7 +6,9 @@ public class TrainTest {
     // Engine Tests
     @Test
     public void testEngineConstructor() {
-        fail();
+        Engine myEngine = new Engine(FuelType.ELECTRIC, 50.0, 150);
+        
+        
     }
 
     @Test
