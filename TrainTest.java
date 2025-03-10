@@ -96,12 +96,35 @@ public class TrainTest {
     // Train Tests
     @Test
     public void testTrainConstructor() {
-        fail();
+        Train myTrain = new Train(FuelType.ELECTRIC, 50.0, 100.0, 5, 25);
+
+        assertEquals(FuelType.ELECTRIC, myTrain.getEngine().getFuelType());
+        assertEquals(50.0, myTrain.getEngine().getCurrentFuel(), 0.0);
+        assertEquals(100.0, myTrain.getEngine().getMaxFuel(), 0.0);
+
+        assertEquals(5, )
+        assertEquals(25, myTrain.getMaxCapacity());
+
+
     }
 
     @Test
     public void testTrainPassengerCount() {
-        fail();
+        Train myTrain = new Train(FuelType.ELECTRIC, 50.0, 100.0, 5, 25);
+
+        Car myCar = myTrain.getCar(0);
+
+        Passenger c = new Passenger ("Chiashi");
+        Passenger p = new Passenger ("Preston");
+
+        myCar.addPassenger(c);
+        myCar.addPassenger(p);
+
+
+
+        assertEquals(2, myTrain.getMaxCapacity()-myTrain.seatsRemaining());
+
+
     }
 
     @Test
@@ -111,7 +134,20 @@ public class TrainTest {
 
     @Test
     public void testTrainPrintManifest() {
-        fail();
+        Train myTrain = new Train(FuelType.ELECTRIC, 50.0, 100.0, 5, 25);
+
+        Car myCar = new Car (2);
+        myCar = myTrain.getCar(0);
+
+        Passenger c = new Passenger ("Chiashi");
+        Passenger p = new Passenger ("Preston");
+
+        myCar.addPassenger(c);
+        myCar.addPassenger(p);
+
+        myTrain.printManifest();
+
+
     }
     
 }
