@@ -79,6 +79,9 @@ public class TrainTest {
 
     @Test
     public void testPassengerBoardCarFull() {
+        // Create a car with a capacity of one and two passengers 
+        // Ensures that the second passenger cannot board the car
+        
         Car myCar = new Car(1);
         Passenger myPassenger = new Passenger("Kiara");
         Passenger myPassenger2 = new Passenger("John");
