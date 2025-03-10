@@ -69,12 +69,25 @@ public class TrainTest {
     // Passenger Tests
     @Test
     public void testPassengerBoardCarWithSpace() {
-        fail();
+       Car myCar = new Car(2);
+       Passenger myPassenger = new Passenger("Kiara");
+
+       myPassenger.boardCar(myCar);
+
+       assertTrue(myPassenger.getBoardsCar());
     }
 
     @Test
     public void testPassengerBoardCarFull() {
-        fail();
+        Car myCar = new Car(1);
+        Passenger myPassenger = new Passenger("Kiara");
+        Passenger myPassenger2 = new Passenger("John");
+        
+       myPassenger.boardCar(myCar);
+       myPassenger2.boardCar(myCar);
+
+       assertFalse(myPassenger2.getBoardsCar());
+
     }
 
     // Train Tests

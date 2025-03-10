@@ -1,13 +1,18 @@
 public class Passenger implements PassengerRequirements {
     
     private String name;
-  /** 
+    private Boolean boardsCar;
+
+  
+
+/** 
    * Constructor for passenger name
    * @param name
    */
     public Passenger(String name) {
         this.name = name;
     }
+
     /**
      * "getter" which gets the name of the passenger
      * @return name of passenger
@@ -32,12 +37,22 @@ public class Passenger implements PassengerRequirements {
      * Passenger boards a train car
      * @param c specific car that passenger boards
      */
+
+    public Boolean getBoardsCar() {
+        return boardsCar;
+    }
+
+    public void setBoardsCar(Boolean boardsCar) {
+        this.boardsCar = boardsCar;
+    }
     
     @Override
     public void boardCar(Car c) {
        if (c.addPassenger(this)){
+       this.boardsCar = true;
         System.out.println(name +  " " + "boarded the car");
        }  else {
+        this.boardsCar = false;
         System.out.println(name + " " +"could not board car");
        }
     }
