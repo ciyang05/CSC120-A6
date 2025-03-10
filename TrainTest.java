@@ -102,8 +102,8 @@ public class TrainTest {
         assertEquals(50.0, myTrain.getEngine().getCurrentFuel(), 0.0);
         assertEquals(100.0, myTrain.getEngine().getMaxFuel(), 0.0);
 
-        assertEquals(5, )
-        assertEquals(25, myTrain.getMaxCapacity());
+        assertEquals(5, myTrain.getMaxCapacity() / 25); // takes the max capacity of entire train and divides by 25 (max capacity per car)
+        assertEquals(25, myTrain.getMaxCapacity() / 5); // takes the max capacity of entire train and divides by 5 (total cars) 
 
 
     }
